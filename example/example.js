@@ -1,3 +1,3 @@
-const color = require('../')
+var {color, log} = require('../index.js')
 
-console.log(`${color('red')} red ${color.RESET}`)
+log`${color('red')} red ${color.RESET}`
