@@ -9,7 +9,7 @@ class RGB {
   }
 }
 
-function col (strings, ...keys) {
+function log (strings, ...keys) {
   console.log(strings, keys)
 }
 

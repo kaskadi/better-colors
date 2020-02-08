@@ -4,8 +4,37 @@
     <meta charset="utf-8">
     <title></title>
     <script type="module">
-      import {color,log} from '../better-colors.js'
-      let cl = log`${'green'} red ${color.RESET}`
+      import {color} from '../better-colors.js'
+      const Logger = {}
+
+
+      const red = "color:red; background:orange; font-size:30px"
+      const border = "border:1px solid black; margin:5px;padding:5px; border-radius:5px"
+
+      log`${border}bla ${red}red${color.RESET} ${color('green')}green ${color('blue')}blue`
+
+      
+
+      function log(strings, ...keys){
+        var res = strings.map((item,index)=>{
+          if(index>0){
+            return "%c"+item
+          }else{
+            return item
+          }
+        })
+        res = [res.join("")]
+        keys.forEach(item=>{
+          let col = item
+          if(col.constructor.name==="RGB"){
+            col = `color: rgb(${col.r},${col.g},${col.b})`
+          }
+          res.push(col)
+        })
+        console.log(...res)
+      }
+
+
     </script>
   </head>
   <body>
