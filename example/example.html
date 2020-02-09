@@ -7,13 +7,13 @@
       import {color} from '../better-colors.js'
       const Logger = {}
 
-
-      const red = "color:red; background:orange; font-size:30px"
+      const img = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>'
+      const red = `color:red; background:url('${img}'); font-size:30px`
       const border = "border:1px solid black; margin:5px;padding:5px; border-radius:5px"
 
       log`${border}bla ${red}red${color.RESET} ${color('green')}green ${color('blue')}blue`
 
-      
+
 
       function log(strings, ...keys){
         var res = strings.map((item,index)=>{
@@ -38,6 +38,13 @@
     </script>
   </head>
   <body>
-
+    <img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" ><circle cx="50" fill="green" cy="50" r="50"/></svg>'/>
+    <svg enable-background="new" style="position:absolute;left:0"viewBox="0 0 100 100" width="100px" height="100px">
+      <filter id="myfilter">
+        <feGaussianBlur in="BackgroundImage" stdDeviation="5" dx="2" dy="2"/>
+      </filter>
+      <circle  fill="blue" cx="50" cy="60" r="50"/>
+      <circle filter="url(#myfilter)" fill="red" cx="70" cy="70" r="50"/>
+    </svg>
   </body>
 </html>
