@@ -1,0 +1,19 @@
+name: testing
+on:
+  push:
+    branches:
+      - 'master'
+      - 'release/**'
+    paths:
+      - 'index.js'
+      - 'test/**'
+      - '.github/workflows/testing.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: npm ci
+    - name: Test
+      run: npm test
