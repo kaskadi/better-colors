@@ -6,6 +6,7 @@ on:
       - 'release/**'
     paths:
       - 'index.js'
+      - 'package.json'
 jobs:
   publish:
     runs-on: ubuntu-latest
