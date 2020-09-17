@@ -1,4 +1,21 @@
 const colorNames = require('./data/css-color-names.json')
+
+/**
+ * Generate ANSI color code for the given color
+ * @module color
+ * @param {string} color - Color to convert to equivalent ANSI code. Accepts: regular color names (`red`, etc.), RGB and HEX.
+ * @returns {string}
+ * @example
+ * const color = require('better-colors')
+ *
+ * // will all print '\u001b[38;2;255;0;0m\u001b[10m'
+ * console.log(color('red'))
+ * console.log(color('#ff0000'))
+ * console.log(color(255, 0, 0))
+ *
+ * // will print '\u001b[48;2;255;0;0m\u001b[10m'
+ * console.log(color('red', 1))
+ */
 module.exports = color
 function color (...args) {
   let rgb
