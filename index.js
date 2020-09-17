@@ -2,7 +2,7 @@ const colorNames = require('./data/css-color-names.json')
 
 /**
  * Generate ANSI color code for the given color
- * @module color
+ * @module better-colors
  * @param {string} color - Color to convert to equivalent ANSI code. Accepts: regular color names (`red`, etc.), RGB and HEX.
  * @returns {string}
  * @example
