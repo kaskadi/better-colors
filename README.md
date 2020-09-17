@@ -28,9 +28,9 @@ npm i @kaskadi/better-colors
 
 # Usage
 
-<a name="module_color"></a>
+<a name="module_better-colors"></a>
 
-## color ⇒ <code>string</code>
+## better-colors ⇒ <code>string</code>
 Generate ANSI color code for the given color
 
 
