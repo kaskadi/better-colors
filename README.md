@@ -6,7 +6,6 @@
 
 [![](https://img.shields.io/github/workflow/status/kaskadi/better-colors/publish?label=publish&logo=npm)](https://github.com/kaskadi/better-colors/actions?query=workflow%3Apublish)
 [![](https://img.shields.io/github/workflow/status/kaskadi/better-colors/build?label=build&logo=mocha)](https://github.com/kaskadi/better-colors/actions?query=workflow%3Abuild)
-[![](https://img.shields.io/github/workflow/status/kaskadi/better-colors/generate-docs?label=docs&logo=read-the-docs)](https://github.com/kaskadi/better-colors/actions?query=workflow%3Agenerate-docs)
 
 **CodeClimate**
 
@@ -26,17 +25,16 @@
 npm i @kaskadi/better-colors
 ```
 
-# Usage
+# API documentation
 
-<a name="module_better-colors"></a>
+## better-colors
 
-## better-colors ⇒ <code>string</code>
 Generate ANSI color code for the given color
 
 
 | Param | Type | Description |
 | --- | --- | --- |
-| color | <code>string</code> | Color to convert to equivalent ANSI code. Accepts: regular color names (`red`, etc.), RGB and HEX. |
+| color | `string` | Color to convert to equivalent ANSI code. Accepts: regular color names (`red`, etc.), RGB and HEX. |
 
 **Example**  
 ```js
@@ -50,3 +48,4 @@ console.log(color(255, 0, 0))
 // will print '\u001b[48;2;255;0;0m\u001b[10m'
 console.log(color('red', 1))
 ```
+<!-- LINKS -->
