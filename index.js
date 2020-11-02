@@ -65,6 +65,3 @@ function getColorFromRGB (hexCode) {
     b: parseInt(hexCode.substr(5, 2), 16)
   }
 }
-
-const header = 'Bearer SOME_TOKEN'
-console.log(header)
