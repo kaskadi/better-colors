@@ -32,6 +32,12 @@ Generate ANSI color code for the given color
 | --- | --- | --- |
 | color | `string` | Color to convert to equivalent ANSI code. Accepts: regular color names (`red`, etc.), RGB and HEX. |
 
+**Properties**
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| \[RESET\] | `string` | `'\x1b[0m'` | Gives the ANSI code to reset colors in terminal. |
+
 **Example**  
 ```js
 const color = require('better-colors')
@@ -43,5 +49,8 @@ console.log(color(255, 0, 0))
 
 // will print '\u001b[48;2;255;0;0m\u001b[10m'
 console.log(color('red', 1))
+
+// will print '\x1b[0m'
+console.log(color.RESET)
 ```
 <!-- LINKS -->
