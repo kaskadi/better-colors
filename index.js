@@ -4,6 +4,7 @@ const colorNames = require('./data/css-color-names.json')
  * Generate ANSI color code for the given color
  * @module better-colors
  * @param {string} color - Color to convert to equivalent ANSI code. Accepts: regular color names (`red`, etc.), RGB and HEX.
+ * @property {string} [RESET=\x1b[0m] - Gives the ANSI code to reset colors in terminal. 
  * @returns {string}
  * @example
  * const color = require('better-colors')
@@ -15,6 +16,10 @@ const colorNames = require('./data/css-color-names.json')
  *
  * // will print '\u001b[48;2;255;0;0m\u001b[10m'
  * console.log(color('red', 1))
+ * 
+ * // will print '\x1b[0m'
+ * console.log(color.RESET)
+ *
  */
 module.exports = color
 function color (...args) {
